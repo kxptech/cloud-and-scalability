@@ -15,3 +15,9 @@ When you are scaling horizontally you need to allocate more machines, while scal
 Every infrastructure that is not based on cloud in taken as on-premise
 
 #### IP addresses
+
+## Sections
+
+The sections above are based on the `AWS Cloud` Concepts
+
+- [VPC](VPC.md)
