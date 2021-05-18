@@ -23,3 +23,4 @@ Every infrastructure that is not based on cloud in taken as on-premise
 The sections above are based on the `AWS Cloud` Concepts
 
 - [VPC](VPC.md)
+- [Highly Available Architectures](HA.md)
