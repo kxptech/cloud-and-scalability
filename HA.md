@@ -46,6 +46,20 @@ Groups use a launch template/configuration to launch your EC2 instances and you 
 
 There are several ways that you can scale your Auto Scaling groups.
 
+- Maintain current instance levels at all times: Pretty self-explanatory, you can specify a number of instances to be running at all times. To maintain the current number of instances AWS performs periodic health checks.
+
+- Scale manually: It is the most basic type of scaling, where you cna only specify the maximum, minimum or desired capacity, and AWS takes care of all the rest.
+
+- Schedule based scaling: Self-explanatory too :). It's very useful if you know exactly when you need to increase/decrease the number of your instances.
+
+- On demand: The most popular way of scaling because it let you use `scaling policies`, where you define parameters that control the scaling process.
+
+- Predictive scaling : A relatively new form of scaling where you combine AWS Auto Scaling and EC2 Auto Scaling, proactive/reactive approach.
+
+### How to design HA Architectures
+
+> Netflix simian army [link](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
+
 ---
 
 [Go back](README.md)
