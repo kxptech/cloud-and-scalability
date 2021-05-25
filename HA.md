@@ -14,6 +14,8 @@ There are three types of load balancers:
 
 - `Classic Load Balancer (CLB)`: It is the most cost-effective solution and do simple load balance (`round-robin`). Return 504 if your service is not available.
 
+Instances monitored by ELBs are reported as InService/OutOfService
+
 ### X-Forwarded-For Header
 
 If you want to discover you user's `public ip address` when your application is inside a load balancer you must get the `x-forwarded-for` header.
@@ -61,5 +63,33 @@ There are several ways that you can scale your Auto Scaling groups.
 > Netflix simian army [link](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
 
 ---
+
+### Elastic Beanstalk
+
+Elastic Beanstalk lets you deploy your applications without worrying about the infrastructure. You basically upload your code and it creates the provisioning, load balancing, scaling and health monitoring.
+
+### Highly Available Bastions
+
+You can make your bastions highly available taking two approaches
+
+#### Expensive (Prod environment)
+
+Two hosts in two separate AZs, and use a Network Load Balancer with static IP addresses to fail over. You can't use an Application Load Balancer, because it is layer 7, you need layer 4 to do SSH.
+
+#### Cheap (Dev environment)
+
+One host in one AZ behind an Auto Scaling group with health checks and a fixed elastic IP address, if one fails, the health check will fail and the Auto Scaling Group will provision another EC2 in a separate AZ.
+
+### On Premise Strategy Services
+
+- Database Migration Service (DMS)
+
+- Server Migration Service (SMS)
+
+- AWS Application Discovery Service
+
+- VM Import/Export
+
+- Download Amazon Linux 2 as an ISO
 
 [Go back](README.md)
