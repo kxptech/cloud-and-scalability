@@ -24,3 +24,4 @@ The sections above are based on the `AWS Cloud` Concepts
 
 - [VPC](VPC.md)
 - [Highly Available Architectures](HA.md)
+- [EC2](EC2.md)
